@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import SanFraciscoDesktop from "../../../public/img/sanFranciscoDesktop.jpg";
+---
+
+<main class="w-full h-auto">
+    <section class="home">
+        <div class="w-full h-3/4">
+            <div
+                class="w-full h-full flex flex-col py-4 space-y-96 absolute items-center"
+            >
+                <input
+                    type="search"
+                    class="w-64 outline-none rounded-full text-center py-1 px-2 shadow"
+                    placeholder="San Francisco"
+                    name=""
+                    id=""
+                />
+                <button class="w-36 font-semibold rounded-full p-1 shadow bg-white text-md text-primary px-2 "> Explore more </button>
+            </div>
+            <div class="w-full h-full">
+                <Image src={SanFraciscoDesktop} alt="SF" />
+            </div>
+        </div>
+    </section>
+</main>

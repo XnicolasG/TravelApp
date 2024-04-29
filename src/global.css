@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Card{
+    @apply w-48 h-64  rounded-lg ;
+}
+.CardImg{
+    @apply w-full h-3/5 rounded-t-lg bg-cover;
+}
