@@ -1,19 +1,43 @@
 ---
-const Cards = []
+const Cards = [
+    {
+        location: "Norway",
+        description: "Beautiful landscapes",
+        image: "bg-norway",
+        style: 'bg-secondary text-white'
+    },
+    {
+        location: "New York",
+        description: "Culturally diverse city",
+        image: "bg-new-york",
+        style: 'bg-white text-terciary'
+
+    },
+    {
+        location: "bali",
+        description: "Perfect weather",
+        image: "bg-bali",
+        style: 'bg-secondary text-white'
+    },
+];
 ---
 
-<section 
-class="flex justify-center mt-12"
-id="recomendation">
-    <div class="Card">
-        <div class="CardImg bg-norway"></div>
-        <div class="bg-secondary text-white pt-1 px-4 rounded-b h-2/5">
-        <p class=" text-bold text-xl">
-            Norway
-        </p>
-        <p class="leading-5"> 
-            Lorem ipsum dolor sit amet  
-        </p>
-        </div>
+<main class="m-8 mx-4 mt-12">
+    <h1 class="text-primary text-xl font-semibold">Our Recomendations</h1>
+    <div
+        class="w-auto h-80 items-center mt-6 overflow-x-auto overscroll-x-contain gap-x-4 flex justify-center"
+    >
+        {
+            Cards.map((it) => (
+                <div class=" Card mt-2 ">
+                    <div class={`group CardImg ${it.image} flex justify-center relative `} >
+                        <div class={`${it.style} pt-1 px-4 rounded-2xl h-16  absolute -bottom-8 group-hover:-bottom-4 group-hover:h-24 transition-all`}>
+                            <p class="text-bold text-xl">{it.location}</p>
+                            <p class="leading-5">{it.description}</p>
+                        </div>
+                    </div>
+                </div>
+            ))
+        }
     </div>
-</section>
+</main>

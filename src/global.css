@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 .Card{
-    @apply w-48 h-64  rounded-lg ;
+    @apply w-48 h-60 rounded-lg flex-none;
 }
 .CardImg{
-    @apply w-full h-3/5 rounded-t-lg bg-cover;
+    @apply w-full h-full rounded-t-lg bg-cover ;
 }
