@@ -19,21 +19,87 @@ const Cards = [
         image: "bg-bali",
         style: 'bg-secondary text-white'
     },
+    {
+        location: "Iceland",
+        description: "Unique country",
+        image: "bg-iceland",
+        style: 'bg-white text-terciary'
+
+    },
+    {
+        location: "Europe",
+        description: "Great architecture",
+        image: "bg-europe",
+        style: 'bg-secondary text-white'
+    },
+    {
+        location: "Seattle",
+        description: "A special city",
+        image: "bg-seattle",
+        style: 'bg-white text-terciary'
+
+    },
+    {
+        location: "Los Angeles",
+        description: "Just need to be there",
+        image: "bg-LA",
+        style: 'bg-secondary text-white'
+    },
+    {
+        location: "Sydney",
+        description: "Nothing to compare",
+        image: "bg-sydney",
+        style: 'bg-white text-terciary'
+
+    },
+    {
+        location: "Miami",
+        description: "Let's have fun",
+        image: "bg-miami",
+        style: 'bg-secondary text-white'
+    },
+    {
+        location: "Switzerland",
+        description: "Magic places all over there",
+        image: "bg-switzerland",
+        style: 'bg-white text-terciary'
+
+    },
+    {
+        location: "Yosemite",
+        description: "Pure nature, nothing more",
+        image: "bg-yosemite",
+        style: 'bg-secondary text-white'
+
+    },
+    {
+        location: "Chicago",
+        description: "Vibrant Arts and Culture Scene",
+        image: "bg-chicago",
+        style: 'bg-white text-terciary'
+    },
+    {
+        location: "San Francisco",
+        description: "Foodie Paradise",
+        image: "bg-san-francisco",
+        style: 'bg-secondary text-white'
+
+    },
 ];
 ---
 
 <main class="m-8 mx-4 mt-12">
     <h1 class="text-primary text-xl font-semibold">Our Recomendations</h1>
     <div
-        class="w-auto h-80 items-center mt-6 overflow-x-auto overscroll-x-contain gap-x-4 flex justify-center"
+        class="w-auto h-80 items-center my-6 overflow-x-auto overflow-y-hidden overscroll-x-contain scroll-my-1 scroll-smooth snap-mandatory  snap-x gap-x-4 flex justify-start px-2"
     >
         {
             Cards.map((it) => (
-                <div class=" Card mt-2 ">
-                    <div class={`group CardImg ${it.image} flex justify-center relative `} >
-                        <div class={`${it.style} pt-1 px-4 rounded-2xl h-16  absolute -bottom-8 group-hover:-bottom-4 group-hover:h-24 transition-all`}>
+                <div class=" Card relative mb-8 ">
+                    <div class={`group CardImg ${it.image} flex justify-center  `} >
+                        <div class={`${it.style} pt-1 px-4 overflow-hidden rounded-2xl w-44 h-16  absolute -bottom-8 group-hover:translate-y-[-20%] group-hover:h-24 transition-all`}>
                             <p class="text-bold text-xl">{it.location}</p>
-                            <p class="leading-5">{it.description}</p>
+                            <p class="leading-4 text-sm ">{it.description}</p>
                         </div>
                     </div>
                 </div>
