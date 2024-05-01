@@ -10,5 +10,5 @@
 }
 
 .TrendTitle{
-    @apply text-2xl ;
+    @apply text-4xl font-semibold text-white p-8 pb-2;
 }
