@@ -8,3 +8,7 @@
 .CardImg{
     @apply w-full h-full rounded-t-lg bg-cover ;
 }
+
+.TrendTitle{
+    @apply text-2xl ;
+}
