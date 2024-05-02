@@ -10,5 +10,5 @@
 }
 
 .TrendTitle{
-    @apply text-4xl font-semibold text-white p-8 pb-2;
+    @apply text-4xl font-semibold bg-gradient-to-r inline-block from-blue-500  to-emerald-600 text-transparent bg-clip-text p-8 pb-2;
 }
