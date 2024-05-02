@@ -1,0 +1,42 @@
+---
+const faq = [
+    {
+        question: "Payment Methods",
+        answer: "We accept VISA, Mastercard, American Express, Paypal and Binance.",
+    },
+    {
+        question: "Cancellation Policy",
+        answer: "Our cancellation policy varies depending on the type of reservation and the time of cancellation. Please refer to the specific terms outlined in your booking confirmation. Generally, cancellations made within 8 days of the check-in date may incur a penalty fee.",
+    },
+    {
+        question: "Long Stays",
+        answer: "we offer special rates for extended stays. Please contact our customer support team or check our website for more information on long-term accommodation discounts.",
+    },
+    {
+        question: "Check-in and Check-out Times",
+        answer: "Our standard check-in time is 12:00 pm and check-out time is 9:00 am. However, early check-in or late check-out may be available upon request and subject to availability. Additional charges may apply.",
+    },
+    {
+        question: "Amenities and Facilities",
+        answer: "Our accommodations typically include amenities such as complimentary Wi-Fi, toiletries, and access to [list specific facilities such as swimming pool, gym, etc.]. Please refer to the accommodation details or contact us for specific information regarding amenities.",
+    },
+    {
+        question: "Pet Policy",
+        answer: "We understand that pets are part of the family, and some of our properties may accommodate them. Please check the specific pet policy for the property you are interested in. Additional fees and restrictions may apply.",
+    },
+];
+---
+
+<section class="w-full h-full px-10 " id="faqs">
+    <aside class="w-full">
+        <p class="text-2xl text-primary font-semibold">FAQS</p>
+        {
+            faq.map((item) => (
+                <div class="group my-4 py-1 hover:px-2 flex flex-col cursor-default rounded-lg hover:bg-slate-800 hover:ring-2 hover:ring-slate-500 transition-all duration-200 ">
+                    <p class="text-xl text-primary group-hover:font-bold transition-all duration-200 ">{item.question}</p>
+                    <p class="text-pretty text-white">{item.answer}</p>
+                </div>
+            ))
+        }
+    </aside>
+</section>
