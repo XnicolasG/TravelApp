@@ -1,8 +1,15 @@
 ---
-
+const about = ["Investors", "Jobs", "Terms and Conditions", "TravelApp Inc."];
 ---
 
-<footer class="w-full h-full bg-slate-800 mt-6">
-    <p class="">about</p>
+<footer class="w-full h-full bg-gradient-to-b from-[#13151a] to-gray-600 mt-24 pb-4 px-10">
 
+    <p class="text-primary text-lg font-semibold">About</p>
+    {
+        about.map((it) => (
+            <div class="text-white/80 hover:text-white transition-all duration-100 cursor-pointer">
+                <p>{it}</p>
+            </div>
+        ))
+    }
 </footer>

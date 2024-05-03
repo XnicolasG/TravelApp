@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import SanFraciscoDesktop from "../../../public/img/sanFranciscoDesktop.jpg";
 ---
 
-<main class="w-full h-auto">
+<main id="home"  class="w-full h-auto">
     <section class="home">
         <div class="w-full relative h-3/4">
             <div
@@ -23,8 +23,9 @@ import SanFraciscoDesktop from "../../../public/img/sanFranciscoDesktop.jpg";
                     Explore more
                 </button>
             </div>
-            <div class="w-full h-full">
-                <Image class='sf' src={SanFraciscoDesktop} alt="SF" />
+            <div class="w-full h-full ">
+                <Image class='' src={SanFraciscoDesktop} alt="SF" />
+                <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-b from-transparent to-[#13151a]"></div>
             </div>
         </div>
     </section>
