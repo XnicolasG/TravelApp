@@ -2,6 +2,7 @@
 import { ViewTransitions } from 'astro:transitions';
 import Footer from '../components/Shared/Footer.astro';
 import NavBar from '../components/Shared/NavBar.astro';
+import TabBar from '../components/Shared/TabBar.astro';
 import '../global.css'
 interface Props {
 	title: string;
@@ -25,6 +26,7 @@ const { title } = Astro.props;
 		<NavBar />
 		<slot />
 		<Footer />
+		<TabBar />
 	</body>
 </html>
 <style is:global>

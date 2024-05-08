@@ -1,0 +1,31 @@
+---
+import Home from "../../../public/svg/Home.astro";
+import Like from "../../../public/svg/Like.astro";
+import Trend from "../../../public/svg/Trend.astro";
+import Dark from "../../../public/svg/Dark.astro";
+
+const Icons = [
+    { svg: Home, id: "home" },
+    { svg: Like, id: "recomendations" },
+    { svg: Trend, id: "trend" },
+];
+---
+
+<nav
+    id="tab-bar"
+    class="flex justify-center items-center w-full h-16 py-4 border-t-4 border-rose-600 bg-slate-200 sticky bottom-0"
+>
+    <section class="flex w-1/2 justify-around">
+        {
+            Icons.map((item) => (
+                <a
+                    href={`#${item.id}`}
+                    title={`#${item.id}`}
+                    class="group p-2 rounded-full bg-white hover:shadow-md transition-all duration-200"
+                >
+                    <item.svg class="size-7 group-hover:text-primary transition-all duration-150" />
+                </a>
+            ))
+        }
+    </section>
+</nav>
