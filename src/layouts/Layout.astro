@@ -12,7 +12,7 @@ const { title } = Astro.props;
 ---
 <!-- background-attachment: fixed; -->
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
@@ -22,7 +22,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 		<ViewTransitions />
 	</head>
-	<body>
+	<body class="dark:bg-gray-950">
 		<NavBar />
 		<slot />
 		<Footer />
@@ -43,7 +43,7 @@ const { title } = Astro.props;
 	} */
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
+		background: #e2e8f0; /*#030712*/
 		scroll-behavior: smooth;
 	}
 	@supports selector(::-webkit-scrollbar) {
@@ -61,10 +61,12 @@ const { title } = Astro.props;
 
 		::-webkit-scrollbar-thumb:active {
 			background-color: black;
+			
 		}
-
+		
 		::-webkit-scrollbar-track {
 			background: black;
+			border-radius: 8px;
 		}
 
 		::-webkit-scrollbar-corner {
@@ -77,3 +79,14 @@ const { title } = Astro.props;
 		}
 	}
 </style>
+
+<script>
+	if (
+        localStorage.theme === 'dark' ||
+        (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+</script>

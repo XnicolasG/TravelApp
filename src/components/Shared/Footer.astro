@@ -2,12 +2,12 @@
 const about = ["Investors", "Jobs", "Terms and Conditions",'Join Us' ,"TravelApp Inc."];
 ---
 
-<footer class="w-full h-full bg-gradient-to-b from-[#13151a] to-gray-600 mt-24 pb-12 px-10">
+<footer class="w-full h-full bg-gradient-to-b from-slate-200 to-gray-600 dark:from-gray-950 dark:to-gray-600 mt-24 pb-12 px-10">
 
-    <p class="text-primary text-lg font-semibold">About</p>
+    <p class="text-primary text-xl font-semibold">About</p>
     {
         about.map((it) => (
-            <div class="text-white/80 hover:text-white transition-all duration-100 cursor-pointer">
+            <div class="dark:text-white/80 dark:hover:text-white hover:font-semibold   transition-all duration-150 cursor-pointer">
                 <p>{it}</p>
             </div>
         ))

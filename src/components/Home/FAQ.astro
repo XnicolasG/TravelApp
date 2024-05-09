@@ -32,9 +32,9 @@ const faq = [
         <p class="text-2xl text-primary font-semibold">FAQS</p>
         {
             faq.map((item) => (
-                <div class="group my-4 py-1 hover:px-2 flex flex-col cursor-default rounded-lg hover:bg-slate-800 hover:ring-2 hover:ring-slate-500 transition-all duration-200 ">
+                <div class="group my-4 py-1 hover:px-2 flex flex-col cursor-default rounded-lg dark:hover:bg-slate-800 hover:ring-2 hover:ring-slate-500 transition-all duration-200 ">
                     <p class="text-xl text-primary group-hover:font-bold transition-all duration-200 ">{item.question}</p>
-                    <p class="text-pretty text-white">{item.answer}</p>
+                    <p class="text-pretty group-hover:font-medium dark:text-white">{item.answer}</p>
                 </div>
             ))
         }
